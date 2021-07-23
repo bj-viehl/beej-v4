@@ -1,0 +1,5 @@
+/Users/wilviehl/Projects/BEEJ/beej-v4/aem-beej/core/src/test/java/com/adobe/aem/beej/core/servlets/SimpleServletTest.java
+/Users/wilviehl/Projects/BEEJ/beej-v4/aem-beej/core/src/test/java/com/adobe/aem/beej/core/schedulers/SimpleScheduledTaskTest.java
+/Users/wilviehl/Projects/BEEJ/beej-v4/aem-beej/core/src/test/java/com/adobe/aem/beej/core/filters/LoggingFilterTest.java
+/Users/wilviehl/Projects/BEEJ/beej-v4/aem-beej/core/src/test/java/com/adobe/aem/beej/core/models/HelloWorldModelTest.java
+/Users/wilviehl/Projects/BEEJ/beej-v4/aem-beej/core/src/test/java/com/adobe/aem/beej/core/listeners/SimpleResourceListenerTest.java

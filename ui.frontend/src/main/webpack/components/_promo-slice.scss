@@ -1,0 +1,123 @@
+.beej-promo-slice {
+
+  &__image {
+    background: {
+      blend-mode: multiply;
+      color: transparent;
+      position: center center;
+      size: cover;
+    }
+    height: 300px;
+
+    // Background Color Overly Options
+    &--grey-overlay {
+      background-color: $color-ui-grey-medium-50;
+    }
+
+    &--pink-overlay {
+      background-color: $color-primary-pink-50;
+    }
+
+    &--blue-overlay {
+      background-color: $color-primary-blue-50;
+    }
+
+    &--purple-overlay {
+      background-color: $color-primary-purple-50;
+    }
+
+    &--orange-overlay {
+      background-color: $color-primary-orange-50;
+    }
+  }
+
+  &__content {
+    background: $color-ui-grey-light;
+    height: auto;
+    padding: 20px;
+
+    &--background-white {
+      background: $color-white;
+    }
+
+    &--background-pink {
+      background: $color-primary-pink;
+
+      .beej-promo-slice__title,
+      .beej-promo-slice__text {
+        color: $color-white;
+      }
+    }
+
+    &--background-purple {
+      background: $color-primary-purple;
+
+      .beej-promo-slice__title,
+      .beej-promo-slice__text {
+        color: $color-white;
+      }
+    }
+
+    &--background-blue {
+      background: $color-primary-blue;
+
+      .beej-promo-slice__title,
+      .beej-promo-slice__text {
+        color: $color-white;
+      }
+    }
+
+    &--background-orange {
+      background: $color-primary-orange;
+
+      .beej-promo-slice__title,
+      .beej-promo-slice__text {
+        color: $color-white;
+      }
+    }
+  }
+
+  @media (min-width: $breakpoint-sm) {
+    &__wrapper {
+      &--margins {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    }
+
+    &__container {
+      display: flex;
+      height: 600px;
+
+      &--content-left {
+        .beej-promo-slice__image {
+          order: 2;
+        }
+      }
+    }
+
+    &__image {
+      height: auto;
+      width: 50%;
+    }
+
+    &__content {
+      height: auto;
+      width: 50%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  @media (min-width: $breakpoint-md) {
+    &__content {
+      padding: 60px;
+    }
+
+    &__container {
+      height: 500px
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>BEEJ Demo Site - All</comment>
+<entry key="allowIndexDefinitions">false</entry>
+<entry key="created">2021-07-23T18:30:05.578Z</entry>
+<entry key="groupId">com.adobe.aem.beej</entry>
+<entry key="name">aem-beej.all</entry>
+<entry key="description">All content package for BEEJ Demo Site</entry>
+<entry key="artifactId">aem-beej.all</entry>
+<entry key="version">0.0.1-SNAPSHOT</entry>
+<entry key="packageType">container</entry>
+<entry key="requiresRoot">false</entry>
+<entry key="group">com.adobe.aem.beej</entry>
+</properties>

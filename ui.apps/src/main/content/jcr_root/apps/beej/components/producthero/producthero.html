@@ -1,0 +1,31 @@
+<section class="beej-product-hero">
+    <!--/* Product Component */-->
+    <productcmp
+        title="${properties.title}"
+        description="${properties.description}"
+        buttonColor="${properties.productColor}"
+        buttonText="${properties.productButton}"
+        productImage1="${properties.projectImage1}"
+        productImage2="${properties.projectImage2}"
+        productImage3="${properties.projectImage3}">
+    </productcmp>
+    <!--/* Product Template */-->
+    <script type="text/x-template" id="product-template">
+        <div class="beej-product-hero-container" id="productApp">
+            <div class="beej-product-hero__image-viewer">
+                <img class="beej-product-hero__image" v-bind:src="image">
+                <div class="beej-product-hero__image-thumbnails">
+                    <img class="beej-product-hero__image-thumbnail" src="{{ productImage1 }}">
+                    <img class="beej-product-hero__image-thumbnail" src="{{ productImage2 }}">
+                    <img class="beej-product-hero__image-thumbnail" src="{{ productImage3 }}">
+                </div>
+            </div>
+            <div class="beej-product-hero__info">
+                <h2 class="beej-product-hero__title">{{ title }}</h2>
+                <p class="beej-product-hero__description">{{ description }}</p>
+                <p class="beej-product-hero__description">{{ price }}</p>
+                <button class="beej-product-hero-button" v-bind:class="buttonColor">{{ buttonText }}</button>
+            </div>
+        </div>
+    </script>
+</section>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:granite="http://www.adobe.com/jcr/granite/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Options"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                    maximized="{Boolean}false">
+                <items jcr:primaryType="nt:unstructured">
+                    <properties
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="CTA"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <ctaText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Button Text"
+                                                    name="./buttonText"/>
+                                            <ctaColor
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                                    fieldLabel="Button Color"
+                                                    name="./buttonColor">
+                                                <items jcr:primaryType="nt:unstructured">
+                                                    <default
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Default (Default)"
+                                                            value=""/>
+                                                    <pink
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Pink"
+                                                            value="beej-button--pink"/>
+                                                    <blue
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Blue"
+                                                            value="beej-button--blue"/>
+                                                    <purple
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="Purple"
+                                                            value="beej-button--purple"/>
+                                                </items>
+                                            </ctaColor>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </properties>
+                    <imageOne
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Image 1"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <image
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Product Image"
+                                                    fieldDescription="Drop an image from the DAM here"
+                                                    fileNameParameter="./primaryImage"
+                                                    fileReferenceParameter="./productImage1"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./file"
+                                                    title="Primary Logo Upload"
+                                                    useHTML5="{Boolean}true"/>
+                                            <Title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Product Image Title"
+                                                    name="./productImageTitle1"/>
+                                            <altText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    fieldLabel="Product Image Alt Text"
+                                                    name="./productImageAltText1"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </imageOne>
+                    <imageTwo
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Image 2"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <image
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Product Image"
+                                                    fieldDescription="Drop an image from the DAM here"
+                                                    fileNameParameter="./primaryImage"
+                                                    fileReferenceParameter="./productImage2"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./file"
+                                                    title="Primary Logo Upload"
+                                                    useHTML5="{Boolean}true"/>
+                                            <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Product Image Title"
+                                                    name="./productImageTitle2"/>
+                                            <altTex
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    fieldLabel="Product Image Alt Text"
+                                                    name="./productImageAltText2"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </imageTwo>
+                    <imageThree
+                            jcr:primaryType="nt:unstructured"
+                            jcr:title="Image 3"
+                            sling:resourceType="granite/ui/components/coral/foundation/container"
+                            margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <columns
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                    margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <image
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                                    allowUpload="{Boolean}false"
+                                                    autoStart="{Boolean}false"
+                                                    class="cq-droptarget"
+                                                    fieldLabel="Product Image"
+                                                    fieldDescription="Drop an image from the DAM here"
+                                                    fileNameParameter="./primaryImage"
+                                                    fileReferenceParameter="./productImage3"
+                                                    mimeTypes="[image]"
+                                                    multiple="{Boolean}false"
+                                                    name="./file"
+                                                    title="Primary Logo Upload"
+                                                    useHTML5="{Boolean}true"/>
+                                            <title
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                                    fieldLabel="Product Image Title"
+                                                    name="./productImageTitle3"/>
+                                            <altText
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/form/textarea"
+                                                    fieldLabel="Image Alt Text"
+                                                    name="./productImageAltText3"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
+                        </items>
+                    </imageThree>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

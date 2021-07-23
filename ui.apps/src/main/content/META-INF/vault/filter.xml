@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/beej/clientlibs"/>
+    <filter root="/apps/beej/components"/>
+    <filter root="/apps/beej/i18n"/>
+</workspaceFilter>

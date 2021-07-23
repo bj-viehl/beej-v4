@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Created-By: Apache Jackrabbit FileVault - Package Maven Plugin 1.1.6
+Build-Jdk-Spec: 11
+Implementation-Title: BEEJ Demo Site - UI content
+Implementation-Version: 0.0.1-SNAPSHOT
+Content-Package-Type: content
+Content-Package-Id: com.adobe.aem.beej:aem-beej.ui.content:0.0.1-SNAPSHO
+ T
+Content-Package-Description: UI content package for BEEJ Demo Site
+Content-Package-Dependencies: com.adobe.aem.beej:aem-beej.ui.apps:0.0.1-
+ SNAPSHOT
+Content-Package-Dependencies-Locations: com.adobe.aem.beej:aem-beej.ui.a
+ pps:0.0.1-SNAPSHOT=maven:com.adobe.aem.beej:aem-beej.ui.apps:0.0.1-SNAP
+ SHOT:zip
+Content-Package-Roots: /conf/beej,/content/beej,/content/dam/beej/asset.
+ jpg,/content/experience-fragments/beej
+

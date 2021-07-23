@@ -1,0 +1,190 @@
+.beej-header {
+  background: $color-white;
+  position: relative;
+  box-shadow: 0 0 8px 2px rgba(128, 128, 128, .25);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+  }
+
+  &__menu {
+    display: none;
+    background: $color-white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60px;
+    z-index: 2;
+    flex-grow: 1;
+  }
+
+  &__nav-group {
+    .beej-header__nav-group {
+      .beej-header__nav-group {
+        display: none;
+      }
+    }
+  }
+
+  &__nav {
+    height: auto;
+  }
+
+  &__nav-item {
+    border-top: 1px solid $color-ui-grey-light;
+    color: $text-color;
+    margin: 0;
+    padding: 0 20px;
+    height: 50px;
+    transition: all .25s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+    &:hover {
+      background: $color-ui-grey-light;
+    }
+  }
+
+  &__menu-button {
+    background: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    transition: all .25s ease-in-out;
+    outline: none;
+    border: none;
+
+    &-icon {
+      height: 30px;
+      width: 30px;
+    }
+
+    &-icon--menu {
+      display: block;
+    }
+
+    &-icon--closed {
+      display: none;
+    }
+  }
+
+  &__logo {
+    height: 40px;
+    flex-grow: 1;
+  }
+
+  &__logo-img {
+    height: 40px;
+  }
+
+  &__cta-button {
+    justify-content: center;
+    background: $color-ui-grey-dark;
+  }
+
+  &--open {
+    .beej-header__menu-button-icon--menu {
+      display: none;
+    }
+    .beej-header__menu-button-icon--closed {
+      display: block;
+    }
+  }
+
+  &--dark {
+    background: $color-ui-grey-dark;
+
+    .beej-header__nav-item {
+      color: $color-white;
+    }
+  }
+
+  // Sticky header given with data-sticky attr
+  &[data-sticky="true"] {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    left: 0;
+    right: 0;
+  }
+
+  @media (min-width: $breakpoint-md) {
+
+    &__container {
+      height: 80px;
+    }
+
+    &__menu-button {
+      display: none;
+    }
+
+    &__logo {
+      height: 50px;
+      flex-grow: 0;
+    }
+
+    &__logo-img {
+      height: 50px;
+    }
+
+    &__menu {
+      background: transparent;
+      display: block;
+      position: relative;
+      top: 0;
+      height: 80px;
+
+      .navigation {
+        display: flex;
+        flex-grow: 1;
+      }
+    }
+
+    &__menu-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      height: 80px;
+    }
+
+    &__nav-group {
+      display: flex;
+      flex-grow: 0;
+    }
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    &__nav-item {
+      color: $text-color-dark;
+      margin: 0 10px;
+      border: 0;
+
+      &--level-2 {
+        display: none;
+      }
+
+      &:hover {
+        color: $color-primary-blue;
+        background: transparent;
+      }
+    }
+
+    &__cta-button {
+      background: transparent;
+    }
+  }
+}
