@@ -4,7 +4,7 @@
 <comment>BEEJ Demo Site - UI config</comment>
 <entry key="cloudManagerTarget">none</entry>
 <entry key="allowIndexDefinitions">false</entry>
-<entry key="created">2021-07-23T18:29:53.077Z</entry>
+<entry key="created">2021-07-26T16:44:07.403Z</entry>
 <entry key="groupId">com.adobe.aem.beej</entry>
 <entry key="name">aem-beej.ui.config</entry>
 <entry key="description">UI config package for BEEJ Demo Site</entry>

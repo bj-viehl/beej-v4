@@ -173,7 +173,7 @@
                                                     allowUpload="{Boolean}false"
                                                     autoStart="{Boolean}false"
                                                     class="cq-droptarget"
-                                                    fieldLabel="Menu Button Icon"
+                                                    fieldLabel="Close Button Icon"
                                                     fieldDescription="Drop an svg icon from the DAM here"
                                                     fileNameParameter="./primaryCloseIcon"
                                                     fileReferenceParameter="./closeIcon"

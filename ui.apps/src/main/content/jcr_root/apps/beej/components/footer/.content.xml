@@ -3,4 +3,4 @@
           jcr:primaryType="cq:Component"
           jcr:title="BEEJ Footer"
           jcr:description="Footer with nav"
-          componentGroup="BEEJ.Structure"/>
+          componentGroup="BEEJ Demo Site - Content"/>

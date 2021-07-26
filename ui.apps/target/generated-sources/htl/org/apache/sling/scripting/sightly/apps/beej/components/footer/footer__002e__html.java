@@ -35,8 +35,6 @@ public final class footer__002e__html extends RenderUnit {
 // Main Template Body -----------------------------------------------------------------------------
 
 Object _dynamic_properties = bindings.get("properties");
-Object _dynamic_multifieldhelper = bindings.get("multifieldhelper");
-Object _dynamic_item = bindings.get("item");
 out.write("<footer");
 {
     String var_attrcontent0 = ("beej-footer " + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_properties, "footerTheme"), "attribute")));
@@ -86,25 +84,10 @@ out.write(">\n            <img class=\"beej-footer__logo-img\"");
         }
     }
 }
-out.write("/>\n        </a>\n");
+out.write("/>\n        </a>\n        <nav class=\"beej-footer__nav\">\n            <a class=\"beej-footer__nav-item\" href=\"*\">Home</a>\n            <a class=\"beej-footer__nav-item\" href=\"*\">About</a>\n            <a class=\"beej-footer__nav-item\" href=\"*\">Products</a>\n            <a class=\"beej-footer__nav-item\" href=\"*\">Blog</a>\n            <a class=\"beej-footer__nav-item\" href=\"*\">Portfolio</a>\n        </nav>\n        <div class=\"beej-footer__legal-text\">");
 {
-    String var_9 = (("<!--        <nav class=\"beej-footer__nav\" data-sly-use.multiFieldHelper=\"" + renderContext.getObjectModel().toString(renderContext.call("xss", "com/adobe/aem/demo/beej/core/models/MultifieldHelper", "comment"))) + "\">-->");
+    Object var_9 = renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_properties, "legalText"), "text");
     out.write(renderContext.getObjectModel().toString(var_9));
-}
-out.write("\n");
-{
-    String var_10 = (("<!--            <sly data-sly-list.item=\"" + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_multifieldhelper, "itemsList"), "comment"))) + "\">-->");
-    out.write(renderContext.getObjectModel().toString(var_10));
-}
-out.write("\n");
-{
-    String var_11 = (((((("<!--                <a class=\"beej-footer__nav-item\" href=\"" + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_item, "navLinkURL"), "comment"))) + "\" target=\"") + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_item, "navLinkTarget"), "comment"))) + "\">") + renderContext.getObjectModel().toString(renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_item, "navLinkText"), "comment"))) + "</a>-->");
-    out.write(renderContext.getObjectModel().toString(var_11));
-}
-out.write("\n<!--            </sly>-->\n<!--        </nav>-->\n        <nav class=\"beej-footer__nav\">\n            <a class=\"beej-footer__nav-item\" href=\"*\">Home</a>\n            <a class=\"beej-footer__nav-item\" href=\"*\">About</a>\n            <a class=\"beej-footer__nav-item\" href=\"*\">Products</a>\n            <a class=\"beej-footer__nav-item\" href=\"*\">Blog</a>\n            <a class=\"beej-footer__nav-item\" href=\"*\">Portfolio</a>\n        </nav>\n        <div class=\"beej-footer__legal-text\">");
-{
-    Object var_12 = renderContext.call("xss", renderContext.getObjectModel().resolveProperty(_dynamic_properties, "legalText"), "text");
-    out.write(renderContext.getObjectModel().toString(var_12));
 }
 out.write("</div>\n    </div>\n</footer>");
 

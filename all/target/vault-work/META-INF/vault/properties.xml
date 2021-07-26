@@ -3,7 +3,7 @@
 <properties>
 <comment>BEEJ Demo Site - All</comment>
 <entry key="allowIndexDefinitions">false</entry>
-<entry key="created">2021-07-23T18:30:05.578Z</entry>
+<entry key="created">2021-07-26T16:44:07.896Z</entry>
 <entry key="groupId">com.adobe.aem.beej</entry>
 <entry key="name">aem-beej.all</entry>
 <entry key="description">All content package for BEEJ Demo Site</entry>
