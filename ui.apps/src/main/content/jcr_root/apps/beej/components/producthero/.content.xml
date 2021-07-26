@@ -3,4 +3,4 @@
     jcr:primaryType="cq:Component"
     jcr:title="BEEJ Product Hero"
     jcr:description="Product Hero"
-    componentGroup="BEEJ.Content"/>
+    componentGroup="BEEJ Demo Site - Content"/>
