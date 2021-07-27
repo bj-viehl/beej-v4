@@ -66,19 +66,19 @@
                                                     <pink
                                                         jcr:primaryType="nt:unstructured"
                                                         text="Pink"
-                                                        value="beej-hero--pink-overlay"/>
+                                                        value="--pink"/>
                                                     <blue
                                                         jcr:primaryType="nt:unstructured"
                                                         text="Blue"
-                                                        value="beej-hero--blue-overlay"/>
+                                                        value="--blue"/>
                                                     <purple
                                                         jcr:primaryType="nt:unstructured"
                                                         text="Purple"
-                                                        value="beej-hero--purple-overlay"/>
+                                                        value="--purple"/>
                                                     <orange
                                                         jcr:primaryType="nt:unstructured"
                                                         text="Orange"
-                                                        value="beej-hero--orange-overlay"/>
+                                                        value="--orange"/>
                                                 </items>
                                             </todoBackgroundColor>
                                         </items>
