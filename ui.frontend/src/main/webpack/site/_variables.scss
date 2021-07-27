@@ -29,12 +29,15 @@ $color-white-25:    rgba(255, 255, 255, 0.25);
 
 $color-ui-black:                      #121212;
 $color-ui-grey-medium:                #646464;
+$color-ui-grey-medium-25:          rgba(100,100,100,.25);
 $color-ui-grey-medium-50:          rgba(100,100,100,.5);
 $color-ui-grey-dark:                 #343434;
 $color-ui-grey-light:                #e1e1e1;
 $color-ui-grey-lighter:              #efefef;
 
 $main-gradient: linear-gradient(to bottom right, #0095ff, #ff0076);
+
+$drop-shadow:               0px 2px 10px rgba(100,100,100,.5);
 
 $transition:     all .3s cubic-bezier(0.52,0,0.53,1);
 

@@ -1,0 +1,19 @@
+<section class="beej-todo-list ${properties.todoBackgroundColor}" style="background-image: url('${properties.todoBackgroundImage @ context='uri' }');">
+    <div class="beej-todo-list__container margins">
+        <div class="beej-todo-list__header">
+            <h3 class="beej-todo-list__header-title">${properties.todoTitle || 'My Todo List'}</h3>
+            <div class="been-todo-list__input-group">
+                <input type="text" id="todoInput" placeholder="Add an item to your Todo List">
+                <button class="beej-button">Add Item</button>
+            </div>
+        </div>
+        <ul class="beej-todo-list__list" id="todoList">
+            <li class="beej-todo-list__list-item">Hit the gym</li>
+            <li class="beej-todo-list__list-item checked">Pay bills</li>
+            <li class="beej-todo-list__list-item">Meet George</li>
+            <li class="beej-todo-list__list-item">Buy eggs</li>
+            <li class="beej-todo-list__list-item">Read a book</li>
+            <li class="beej-todo-list__list-item">Organize office</li>
+        </ul>
+    </div>
+</section>
