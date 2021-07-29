@@ -17,4 +17,6 @@
     <sly data-sly-call="${clientlib.css @ categories='beej.base'}">
 </sly>
 
+<!--/* Include Context Hub */-->
+<sly data-sly-call="${clientlib.js @ categories='granite.utils'}"/>
 <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
