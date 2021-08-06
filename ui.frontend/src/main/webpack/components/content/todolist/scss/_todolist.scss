@@ -16,7 +16,20 @@
     margin: 0 auto;
   }
 
-  &__input-box {
+  &__button-group {
+    display: flex;
+    align-items: center;
+    margin: 20px -10px;
+
+    .beej-button {
+      height: 50px;
+      margin: 0 10px;
+      width: 50%;
+      padding: 0;
+    }
+  }
+
+  &__form {
     background-color: $color-white-75;
     border-radius: 50px;
     box-shadow: $drop-shadow;
@@ -25,8 +38,21 @@
     padding: 40px;
   }
 
+  &__filter {
+    margin-bottom: 20px;
+
+    input {
+      border: none;
+      background: transparent;
+      border-bottom: 1px solid #fff;
+
+      &::placeholder {
+        color: $color-white;
+      }
+    }
+  }
+
   &__list-container {
-    box-shadow: $drop-shadow;
     flex-grow: 1;
     margin-left: 40px;
   }
@@ -46,18 +72,13 @@
   &__list-item {
     align-items: center;
     background-color: $color-white-25;
+    box-shadow: $drop-shadow;
     display: flex;
     font-size: 1.25rem;
     height: 40px;
+    margin: 10 0;
     padding: 20px;
     transition: all .5s ease-in-out;
-
-    &:after {
-      content: url('../resources/images/close-icon.svg');
-      width: 20px;
-      position: absolute;
-      right: 20px;
-    }
 
     &:nth-child(even) {
       background-color: $color-white-50;
@@ -91,10 +112,6 @@
 
     .beej-todo-list__list-item {
       color: $color-white;
-
-      &:after {
-        content: url('../resources/images/close-icon-w.svg');
-      }
     }
   }
 
@@ -103,7 +120,7 @@
       display: flex;
     }
 
-    &__input-box {
+    &__form {
       width: 400px;
     }
   }

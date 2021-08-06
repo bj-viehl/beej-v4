@@ -3,23 +3,21 @@
         <h3 class="beej-todo-list__title">${properties.todoTitle || 'My Todo List'}</h3>
     </div>
     <div class="beej-todo-list__container margins">
-        <div class="beej-todo-list__input-box">
-            <div class="been-todo-list__input-group">
-                <input type="text" id="todoInput" placeholder="Add an item to your Todo List">
-                <button class="beej-button beej-button${properties.todoBackgroundColor}">Add Item</button>
+        <form class="beej-todo-list__form" id="todo-form">
+            <div class="beej-todo-list__input-group">
+                <input type="text" id="todo-input" placeholder="Add an item to your Todo List">
+                <div class="beej-todo-list__button-group">
+                    <button type="submit"  class="todo-submit beej-button beej-button${properties.todoBackgroundColor}">Add Item</button>
+                    <a href="#" class="beej-button beej-button--black todo-clear">Clear Tasks</a>
+                </div>
             </div>
-        </div>
+        </form>
         <div class="beej-todo-list__list-container">
-            <ul class="beej-todo-list__list" id="todoList">
-                <li class="beej-todo-list__list-item">Hit the gym</li>
-                <li class="beej-todo-list__list-item checked">Pay bills</li>
-                <li class="beej-todo-list__list-item">Meet George</li>
-                <li class="beej-todo-list__list-item">Buy eggs</li>
-                <li class="beej-todo-list__list-item">Read a book</li>
-                <li class="beej-todo-list__list-item">Organize office</li>
-                <li class="beej-todo-list__list-item">Buy eggs</li>
-                <li class="beej-todo-list__list-item">Read a book</li>
-                <li class="beej-todo-list__list-item">Organize office</li>
+            <div class="beej-todo-list__filter">
+                <input type="text" placeholder="Search your items" name="filter" id="filter">
+            </div>
+            <ul class="beej-todo-list__list todo-list" id="todo-list">
+                
             </ul>
         </div>
     </div>
