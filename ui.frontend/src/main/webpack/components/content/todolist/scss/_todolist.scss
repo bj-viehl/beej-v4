@@ -45,6 +45,7 @@
       border: none;
       background: transparent;
       border-bottom: 1px solid #fff;
+      color: $color-white;
 
       &::placeholder {
         color: $color-white;
@@ -71,18 +72,14 @@
 
   &__list-item {
     align-items: center;
-    background-color: $color-white-25;
+    background-color: $color-white-50;
     box-shadow: $drop-shadow;
     display: flex;
     font-size: 1.25rem;
     height: 40px;
-    margin: 10 0;
+    margin: 10px 0;
     padding: 20px;
     transition: all .5s ease-in-out;
-
-    &:nth-child(even) {
-      background-color: $color-white-50;
-    }
   }
 
   // Background Color Overly Options

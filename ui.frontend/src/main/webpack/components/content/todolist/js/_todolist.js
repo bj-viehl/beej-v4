@@ -4,23 +4,6 @@ const clearTasksButton = document.querySelector('.todo-clear');
 const filter = document.querySelector('#filter');
 const input = document.querySelector('#todo-input');
 
-// Load all event lsteners
-loadEventListeners();
-
-function loadEventListeners() {
-  // Dom load event
-  document.addEventListener('DOMContentLoaded', getTasks);
-  //Add Task
-  form.addEventListener('submit', addTask);
-  //Remove Task
-  todoList.addEventListener('click', removeTask);
-  // Clear Tasks
-  clearTasksButton.addEventListener('click', clearTasks);
-  // Filter
-  filter.addEventListener('keyup', filterTasks);
-  
-}
-
 function getTasks() {
   let tasks;
 
@@ -30,54 +13,24 @@ function getTasks() {
     tasks = JSON.parse(localStorage.getItem('tasks'));
   }
 
-  tasks.forEach(function(todo) {
+  tasks.forEach((task) => {
     // Create Li Element
-    const li = document.createElement('li')
+    const li = document.createElement('li');
     // Add Class
     li.className = 'beej-todo-list__list-item';
     // Create text node
-    li.appendChild(document.createTextNode(todo));
+    li.appendChild(document.createTextNode(task));
     // Create new link
     const link = document.createElement('a');
     // Add class to link
     link.className = 'beej-todo-list__list-item-delete';
-    //Add icon
+    // Add icon
     link.innerHTML = '<i class="fa fa-remove"></i>';
     // Append link to li
     li.appendChild(link);
     // Append li to ul
     todoList.appendChild(li);
   });
-}
-
-function addTask(e) {
-  if (input.value === '') {
-    alert('Add a task');
-  }
-
-  // Create Li Element
-  const li = document.createElement('li')
-  // Add Class
-  li.className = 'beej-todo-list__list-item';
-  // Create text node
-  li.appendChild(document.createTextNode(todo));
-  // Create new link
-  const link = document.createElement('a');
-  // Add class to link
-  link.className = 'beej-todo-list__list-item-delete';
-  //Add icon
-  link.innerHTML = '<i class="fa fa-remove"></i>';
-  // Append link to li
-  li.appendChild(link);
-  // Append li to ul
-  todoList.appendChild(li);
-
-
-  addTaskLS(input.value);
-
-  input.value = '';
-
-  e.preventDefault();
 }
 
 function addTaskLS(task) {
@@ -94,12 +47,31 @@ function addTaskLS(task) {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-function removeTask(e) {
-  if (e.target.parentElement.classList.contains('beej-todo-list__list-item-delete')) {
-    e.target.parentElement.parentElement.remove();
-  
-    removeTaskLS(e.target.parentElement.parentElement);
+function addTask(e) {
+  if (input.value === '') {
+    alert('Add a task');
   }
+
+  // Create Li Element
+  const li = document.createElement('li');
+  // Add Class
+  li.className = 'beej-todo-list__list-item';
+  // Create text node
+  li.appendChild(document.createTextNode(input.value));
+  // Create new link
+  const link = document.createElement('a');
+  // Add class to link
+  link.className = 'beej-todo-list__list-item-delete';
+  // Add icon
+  link.innerHTML = '<i class="fa fa-remove"></i>';
+  // Append link to li
+  li.appendChild(link);
+  // Append li to ul
+  todoList.appendChild(li);
+
+  addTaskLS(input.value);
+
+  input.value = '';
 
   e.preventDefault();
 }
@@ -113,34 +85,58 @@ function removeTaskLS(taskItem) {
     tasks = JSON.parse(localStorage.getItem('tasks'));
   }
 
-  tasks.forEach(function(task, index) {
+  tasks.forEach((task, index) => {
     if (taskItem.textContent === task) {
       tasks.splice(index, 1);
     }
   });
 
   localStorage.setItem('tasks', JSON.stringify(tasks));
- }
+}
+
+function removeTask(e) {
+  if (e.target.parentElement.classList.contains('beej-todo-list__list-item-delete')) {
+    e.target.parentElement.parentElement.remove();
+    removeTaskLS(e.target.parentElement.parentElement);
+  }
+
+  e.preventDefault();
+}
 
 function clearTasks() {
-  if (confirm('Are you sure you want to clear your list?')) {
-    while(taskList.firstChild) {
-      taskList.removeChild(taskList.firstChild);
-    }
-    localStorage.clear();
+  while (todoList.firstChild) {
+    todoList.removeChild(todoList.firstChild);
   }
+  localStorage.clear();
 }
 
 function filterTasks(e) {
   const text = e.target.value.toLowerCase();
 
-  document.querySelectorAll('.beej-todo-list__list-item').forEach(function(task) {
+  document.querySelectorAll('.beej-todo-list__list-item').forEach((task) => {
     const item = task.firstChild.textContent;
-    
-    if(item.toLowerCase().indexOf(text) != -1) {
-      task.style.display = 'block';
+    const taskI = task;
+
+    if (item.toLowerCase().indexOf(text) !== -1) {
+      taskI.style.display = 'block';
     } else {
-      task.style.display = 'none';
+      taskI.style.display = 'none';
     }
   });
 }
+
+function loadEventListeners() {
+  // Dom load event
+  document.addEventListener('DOMContentLoaded', getTasks);
+  // Add Task
+  form.addEventListener('submit', addTask);
+  // Remove Task
+  todoList.addEventListener('click', removeTask);
+  // Clear Tasks
+  clearTasksButton.addEventListener('click', clearTasks);
+  // Filter
+  filter.addEventListener('keyup', filterTasks);
+}
+
+// Load all event lsteners
+loadEventListeners();
