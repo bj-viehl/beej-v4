@@ -5,18 +5,21 @@
     <div class="beej-todo-list__container margins">
         <form class="beej-todo-list__form" id="todo-form">
             <div class="beej-todo-list__input-group">
-                <input type="text" id="todo-input" placeholder="Add an item to your Todo List">
+                <input type="text" id="todo-input" placeholder="Type an item...">
                 <div class="beej-todo-list__button-group">
                     <button type="submit"  class="todo-submit beej-button beej-button${properties.todoBackgroundColor}">Add Item</button>
-                    <a href="#" class="beej-button beej-button--black todo-clear">Clear List</a>
+                    <div class="beej-button beej-button--black todo-clear">Clear List</div>
                 </div>
             </div>
         </form>
         <div class="beej-todo-list__list-container">
             <div class="beej-todo-list__filter">
-                <input type="text" placeholder="Search your items" name="filter" id="filter">
+                <input type="text" placeholder="Search your items..." name="filter" id="filter">
             </div>
-            <ul class="beej-todo-list__list todo-list" id="todo-list">
+            <div class="beej-todo-list__no-results no-results">
+                <p>No results, please try another term.</p>
+            </div>
+            <ul class="beej-todo-list__list" id="todo-list">
                 
             </ul>
         </div>

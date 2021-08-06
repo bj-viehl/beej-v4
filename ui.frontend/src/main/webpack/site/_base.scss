@@ -86,19 +86,10 @@ p {
   }
 }
 
-input {
-  height: calc(50px - 20px);
-}
-
-textarea {
-    height: 100px;
-}
-
 input, textarea {
   background: $color-white;
   border-radius: 3px;
   color: $text-color;
-  height: 50px;
   width: calc(100% - 20px);
   border: 1px solid $color-ui-grey-medium-50;
   outline: none;
@@ -109,6 +100,14 @@ input, textarea {
   &:focus {
     border: 1px solid $color-ui-grey-medium;
   }
+}
+
+input {
+  height: 50px;
+}
+
+textarea {
+    height: 100px;
 }
 
 .beej-input-group {

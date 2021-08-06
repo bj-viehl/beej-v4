@@ -44,18 +44,17 @@
     input {
       border: none;
       background: transparent;
-      border-bottom: 1px solid #fff;
-      color: $color-white;
+      border-bottom: 1px solid $text-color;
+      color: $text-color;
 
       &::placeholder {
-        color: $color-white;
+        color: $text-color;
       }
     }
   }
 
   &__list-container {
     flex-grow: 1;
-    margin-left: 40px;
   }
 
   &--margins {
@@ -79,7 +78,25 @@
     height: 40px;
     margin: 10px 0;
     padding: 20px;
+    position: relative;
     transition: all .5s ease-in-out;
+
+    &-delete {
+      color: $text-color;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+    }
+  }
+
+  &__no-results {
+    background-color: $color-white-25;
+    border-radius: 50px;
+    box-shadow: $drop-shadow;
+    display: none;
+    margin: 50px;
+    padding: 40px;
+    text-align: center;
   }
 
   // Background Color Overly Options
@@ -103,11 +120,21 @@
   &--blue,
   &--purple,
   &--orange {
-    .beej-todo-list__title {
+    .beej-todo-list__filter {
       color: $color-white;
-    }
 
-    .beej-todo-list__list-item {
+      input {
+        color: $color-white;
+        border-bottom: 1px solid $color-white;
+        &::placeholder {
+          color: $color-white;
+        }
+      }
+    }
+    .beej-todo-list__no-results,
+    .beej-todo-list__title,
+    .beej-todo-list__list-item,
+    .beej-todo-list__list-item-delete {
       color: $color-white;
     }
   }
@@ -119,6 +146,10 @@
 
     &__form {
       width: 400px;
+    }
+
+    &__list-container {
+      margin-left: 40px;
     }
   }
 }
