@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0;
     color: $text-color;
+    position: relative;
 }
 
 button,
@@ -122,6 +123,11 @@ textarea {
 }
 
 .margins {
-  max-width: 1200px;
+  padding: 20px;
   margin: 0 auto;
+  max-width: $breakpoint-lg;
+}
+
+.hidden {
+  display: none;
 }

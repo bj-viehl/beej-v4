@@ -1,27 +1,34 @@
 .beej-todo-list-audit {
   background-color: $color-ui-grey-medium-25;
+  border-radius: 20px;
   box-shadow: $drop-shadow;
   padding: 20px;
-  position: static;
+  position: fixed;
   bottom: 20px;
   left: 20px;
   right: 20px;
-  max-width: 600px;
   width: auto;
 
-  &__title {
+  &__title-container {
+    margin-bottom: 20px;
     text-align: center;
+  }
+
+  &__title {
+    color: $color-white;
   }
 
   &__list-container {
     background-color: $color-black;
-    height: min-height 200px;
+    border-radius: 20px;
+    min-height: 200px;
   }
 
   @media (min-width: $breakpoint-md) {
-    bottom: 50px;
-    left: 50px;
+    bottom: 100px;
+    left: unset;
     right: 50px;
     padding: 20px;
+    width: 400px;
   }
 }
