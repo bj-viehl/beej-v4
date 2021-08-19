@@ -4,54 +4,61 @@
 // import { deviceCheck } from '@dependencies/deviceCheck';
 
 class TodoList {
-
   constructor() {
-    this.init()
+    this.init();
   }
 
-  private init = () => {
-    // Dom load event
+  init = () => {
     document.addEventListener('DOMContentLoaded', this.getTasks);
-    // Add Task
     document.querySelector('#todo-form').addEventListener('submit', this.addTask);
-    // Remove Task
     document.querySelector('#todo-list').addEventListener('click', this.removeTask);
-    // Clear Tasks
     document.querySelector('.todo-clear').addEventListener('click', this.clearTasks);
-    // Filter
     document.querySelector('#filter').addEventListener('keyup', this.filterTasks);
   }
+
+  getTasks() {
+    let tasks;
   
-  buildTaskList(task) {
+    if (localStorage.getItem('tasks') === null) {
+      tasks = [];
+    } else {
+      tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+
     const list: HTMLElement = document.querySelector('#todo-list');
 
-    // Create Li Element
-    const li: HTMLElement = document.createElement('li');
-    // Create new link
-    const link: HTMLElement = document.createElement('a');
+    tasks.forEach((task) => {
+      const li: HTMLElement = document.createElement('li');
+      const link: HTMLElement = document.createElement('a');
 
-    // Add Class
-    li.className = 'beej-todo-list__list-item';
-    // Create text node
-    li.appendChild(document.createTextNode(task));
-    // Add class to link
-    link.className = 'beej-todo-list__list-item-delete';
-    // Add icon
-    link.innerHTML = '<i class="fa fa-times"></i>';
+      li.className = 'beej-todo-list__list-item animate__animated animate__backOutLeft animate__bounceInUp ';
+      li.appendChild(document.createTextNode(task));
+      link.className = 'beej-todo-list__list-item-delete';
+      link.innerHTML = '<i class="fa fa-times"></i>';
 
-    // Append link to li
-    li.appendChild(link);
-    // Append li to ul
-    list.appendChild(li);
+      li.appendChild(link);
+      list.appendChild(li);
+    });
   }
 
-  addTask(e) {
+  addTask = (e) => {
     const input: HTMLInputElement = document.querySelector('#todo-input');
+    const list: HTMLElement = document.querySelector('#todo-list');
 
     if (input.value === '') {
-      alert('Add a task');
+      alert('Add a task please');
     } else {
-      this.buildTaskList(input.value);
+      const li: HTMLElement = document.createElement('li');
+      const link: HTMLElement = document.createElement('a');
+
+      li.className = 'beej-todo-list__list-item animate__animated animate__backOutLeft animate__bounceInUp ';
+      li.appendChild(document.createTextNode(input.value));
+      link.className = 'beej-todo-list__list-item-delete';
+      link.innerHTML = '<i class="fa fa-times"></i>';
+
+      li.appendChild(link);
+      list.appendChild(li);
+
       this.addTaskLS(input.value);
     }
 
@@ -60,13 +67,45 @@ class TodoList {
     e.preventDefault();
   }
 
-  removeTask(e) {
+  addTaskLS = (task) => {
+    let tasks;
+  
+    if (localStorage.getItem('tasks') === null) {
+      tasks = [];
+    } else {
+      tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+  
+    tasks.push(task);
+  
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+
+  removeTask = (e) => {
     if (e.target.parentElement.classList.contains('beej-todo-list__list-item-delete')) {
       e.target.parentElement.parentElement.remove();
       this.removeTaskLS(e.target.parentElement.parentElement);
     }
   
     e.preventDefault();
+  }
+
+  removeTaskLS = (taskItem) => {
+    let tasks;
+  
+    if (localStorage.getItem('tasks') === null) {
+      tasks = [];
+    } else {
+      tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+  
+    tasks.forEach((task, index) => {
+      if (taskItem.textContent === task) {
+        tasks.splice(index, 1);
+      }
+    });
+  
+    localStorage.setItem('tasks', JSON.stringify(tasks));
   }
 
   filterTasks(e) {
@@ -84,64 +123,14 @@ class TodoList {
     });
   }
 
-  clearTasks(list) {
+  clearTasks = () => {
+    const list: HTMLElement = document.querySelector('#todo-list');
+
     while (list.firstChild) {
       list.removeChild(list.firstChild);
     }
     localStorage.clear();
   }
-  
-  getTasks() {
-    let tasks;
-  
-    if (localStorage.getItem('tasks') === null) {
-      tasks = [];
-    } else {
-      tasks = JSON.parse(localStorage.getItem('tasks'));
-    }
-
-    return tasks;
-  }
-
-  displayTasks() {
-    const tasks = this.getTasks();
-
-    tasks.forEach((task) => {
-      this.buildTaskList(task);
-    });
-  }
-
-  addTaskLS(task) {
-    let tasks;
-  
-    if (localStorage.getItem('tasks') === null) {
-      tasks = [];
-    } else {
-      tasks = JSON.parse(localStorage.getItem('tasks'));
-    }
-  
-    tasks.push(task);
-  
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-  }
-
-  removeTaskLS(taskItem) {
-    let tasks;
-  
-    if (localStorage.getItem('tasks') === null) {
-      tasks = [];
-    } else {
-      tasks = JSON.parse(localStorage.getItem('tasks'));
-    }
-  
-    tasks.forEach((task, index) => {
-      if (taskItem.textContent === task) {
-        tasks.splice(index, 1);
-      }
-    });
-  
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-  }
 }
 
-export const todoList = new TodoList();
+const todoList = new TodoList();

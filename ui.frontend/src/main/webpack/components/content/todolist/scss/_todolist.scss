@@ -71,6 +71,7 @@
 
   &__list-item {
     align-items: center;
+    --animate-duration: 0.5s;
     background-color: $color-white-50;
     box-shadow: $drop-shadow;
     display: flex;
@@ -79,7 +80,6 @@
     margin: 10px 0;
     padding: 20px;
     position: relative;
-    transition: all .5s ease-in-out;
 
     &-delete {
       color: $text-color;
