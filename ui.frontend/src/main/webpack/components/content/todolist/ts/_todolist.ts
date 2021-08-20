@@ -60,6 +60,7 @@ class TodoList {
       list.appendChild(li);
 
       this.addTaskLS(input.value);
+      this.addNoticeSS(input.value);
     }
 
     input.value = '';
@@ -75,10 +76,26 @@ class TodoList {
     } else {
       tasks = JSON.parse(localStorage.getItem('tasks'));
     }
-  
+
     tasks.push(task);
-  
+
     localStorage.setItem('tasks', JSON.stringify(tasks));
+  }
+
+  addNoticeSS = (task) => {
+    let notices;
+
+    if (localStorage.getItem('notices') === null || localStorage.getItem('notices') === '') {
+      notices = [];
+    } else {
+      notices = JSON.parse(localStorage.getItem('notices'));
+    }
+
+    let notice = `User added '${task}' to the todo list`;
+
+    notices.push(notice);
+  
+    localStorage.setItem('notices', JSON.stringify(notices));
   }
 
   removeTask = (e) => {
