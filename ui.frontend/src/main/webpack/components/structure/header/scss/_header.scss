@@ -1,7 +1,7 @@
 .beej-header {
   background: $color-white;
   position: relative;
-  box-shadow: 0 0 8px 2px rgba(128, 128, 128, .25);
+  box-shadow: 0 0 4px 4px rgba(128, 128, 128, .25);
 
   &__container {
     display: flex;
@@ -12,15 +12,16 @@
 
   &__menu {
     background: $color-white;
-    position: absolute;
+    box-shadow: 0 6px 8px -2px rgba(128, 128, 128, .5);
     left: 0;
-    right: 0;
-    top: 60px;
-    z-index: 2;
     flex-grow: 1;
     max-height: 0;
     overflow: auto;
+    position: absolute;
+    right: 0;
+    top: 60px;
     transition: max-height .25s;
+    z-index: 2;
 
     &-button {
       background: $color-white;
