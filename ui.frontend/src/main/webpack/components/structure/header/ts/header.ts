@@ -22,8 +22,8 @@ class Header {
 
     private toggleMenu = () => {
       const menu = this.header.querySelector(Header.HEADER_MENU) as HTMLElement;
-      const menuIcon = this.header.querySelector(Header.MENU_ICON)as HTMLElement;
-      const closeIcon = this.header.querySelector(Header.CLOSE_ICON)as HTMLElement;
+      const menuIcon = this.header.querySelector(Header.MENU_ICON) as HTMLElement;
+      const closeIcon = this.header.querySelector(Header.CLOSE_ICON) as HTMLElement;
 
       if (menu.classList.contains('beej-header__menu--active')) {
           menu.classList.remove('beej-header__menu--active');
