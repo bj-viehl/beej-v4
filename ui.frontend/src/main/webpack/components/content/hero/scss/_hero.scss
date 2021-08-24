@@ -22,8 +22,8 @@
          text-align: center;
        }
 
-       .beej-button__container {
-         justify-content: center;
+       .beej-button {
+         align-self: center;
        }
      }
 
@@ -34,9 +34,9 @@
          text-align: right;
        }
 
-       .beej-button__container {
-         justify-content: flex-end;
-       }
+       .beej-button {
+        align-self: flex-end;
+      }
      }
    }
 
