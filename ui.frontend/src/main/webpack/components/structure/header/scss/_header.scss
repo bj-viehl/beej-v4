@@ -92,8 +92,11 @@
   }
 
   &__cta-button {
-    justify-content: center;
     background: $color-ui-grey-dark;
+
+    .beej-button {
+      align-self: center;
+    }
   }
 
   &--dark {
