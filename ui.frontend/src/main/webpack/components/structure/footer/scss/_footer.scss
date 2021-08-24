@@ -43,7 +43,7 @@
     background: $color-ui-black;
   }
 
-  @media (min-width: $breakpoint-md) {
+  @media (min-width: $breakpoint-sm) {
     &__nav {
       margin: 50px 0;
       display: flex;
