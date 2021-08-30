@@ -1,7 +1,9 @@
 class BackToTop {
+
   constructor() {
     this.init();
   }
+
   private init() {
     const scrollTopButton = document.querySelector('.beej-back-to-top-button') as HTMLElement;
 
@@ -12,7 +14,7 @@ class BackToTop {
   handleScroll = () => {
     const scrollTopButton = document.querySelector('.beej-back-to-top-button') as HTMLElement;
     const footer = document.querySelector('.beej-footer') as HTMLElement;
-    let footerPosition = footer.getBoundingClientRect();
+    let footerPosition = footer.getBoundingClientRect() as DOMRect;
 
     if (footerPosition.top < window.innerHeight && footerPosition.bottom >= 0) {
       scrollTopButton.style.display = "block";
