@@ -6,8 +6,8 @@
   position: fixed;
   bottom: 20px;
   left: 20px;
-  right: 20px;
   width: auto;
+  z-index: 2;;
 
   &__title-container {
     margin-bottom: 20px;
@@ -32,8 +32,7 @@
 
   @media (min-width: $breakpoint-md) {
     bottom: 100px;
-    left: unset;
-    right: 50px;
+    left: 50px;
     padding: 20px;
     width: 400px;
   }
